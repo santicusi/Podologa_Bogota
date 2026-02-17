@@ -155,7 +155,7 @@ body {
 
 /* Hero Section */
 .hero {
-    background-image: linear-gradient(rgba(0, 184, 212, 0.621), rgba(0, 171, 193, 0.538)), url('../fondo.jpg');
+    background-image: linear-gradient(rgba(0, 184, 212, 0.621), rgba(0, 171, 193, 0.538)), url('../fondo.webp');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
