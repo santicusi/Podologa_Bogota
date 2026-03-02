@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Podólogo Particular Bogotá — Atención Inmediata Sin EPS | Pie Pro Salud</title>
+  <meta name="description" content="Podólogo particular en Bogotá con atención inmediata. Sin EPS, sin filas, sin esperas. Agenda hoy por WhatsApp. Pie Pro Salud — la alternativa que sí funciona.">
+  <link rel="stylesheet" href="landing.css">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1CBG6960DZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1CBG6960DZ');
+  </script>
+
+  <style>
+    /* Override: dark-teal accent hero for this landing */
+    :root {
+      --hero-grad: linear-gradient(145deg, #001c22 0%, #002d36 45%, #004a57 100%);
+    }
+
+    /* Comparison table */
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+    }
+    .compare-table th {
+      padding: 18px 24px;
+      text-align: left;
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .compare-table th:first-child {
+      background: var(--teal-deep);
+      color: rgba(255,255,255,0.55);
+      width: 40%;
+    }
+    .compare-table th.col-them {
+      background: #2d2d2d;
+      color: rgba(255,255,255,0.4);
+      width: 30%;
+    }
+    .compare-table th.col-us {
+      background: var(--teal);
+      color: white;
+      width: 30%;
+    }
+    .compare-table td {
+      padding: 16px 24px;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.93rem;
+    }
+    .compare-table tr:last-child td { border-bottom: none; }
+    .compare-table td:first-child {
+      background: var(--off-white);
+      color: var(--text-dark);
+      font-weight: 500;
+    }
+    .compare-table td.col-them {
+      background: #fafafa;
+      color: #888;
+      text-align: center;
+    }
+    .compare-table td.col-us {
+      background: var(--teal-light);
+      color: var(--teal-deep);
+      font-weight: 600;
+      text-align: center;
+    }
+    .compare-table tr:hover td { filter: brightness(0.97); }
+    .check-green { color: #16A34A; font-size: 1.2rem; }
+    .cross-red   { color: #DC2626; font-size: 1.1rem; }
+
+    /* Pricing section */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    @media(max-width: 900px){ .pricing-grid { grid-template-columns: repeat(2,1fr); } }
+    @media(max-width: 560px){ .pricing-grid { grid-template-columns: 1fr; } }
+
+    .price-card {
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 28px 24px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .price-card:hover {
+      border-color: var(--teal);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-5px);
+    }
+    .price-card__badge {
+      position: absolute;
+      top: 14px; right: 14px;
+      background: var(--teal-light);
+      color: var(--teal-dark);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 50px;
+    }
+    .price-card__badge--domicilio {
+      background: #FFF0E9;
+      color: var(--accent);
+    }
+    .price-card__icon { font-size: 1.8rem; line-height: 1; }
+    .price-card__name {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      color: var(--text-dark);
+      font-weight: 600;
+      line-height: 1.2;
+      margin-top: 4px;
+    }
+    .price-card__desc {
+      font-size: 0.86rem;
+      color: var(--text-mid);
+      line-height: 1.65;
+      flex: 1;
+    }
+    .price-card__footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 8px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .price-card__price {
+      font-family: var(--font-display);
+      font-size: 1.55rem;
+      color: var(--teal-deep);
+      font-weight: 700;
+      line-height: 1;
+    }
+    .price-card__price small {
+      font-size: 0.75rem;
+      color: var(--text-light);
+      font-family: var(--font-body);
+      font-weight: 400;
+      display: block;
+      margin-top: 2px;
+    }
+    .price-card__cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #25D366;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+    .price-card__cta:hover { background: #20b858; transform: scale(1.03); }
+    .pricing-note {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.85rem;
+      color: var(--text-light);
+    }
+    .pricing-note a { color: var(--teal-dark); font-weight: 600; }
+
+    /* Value proposition cards */
+    .vp-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    @media(max-width:600px){ .vp-grid { grid-template-columns: 1fr; } }
+
+    .vp-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 28px 24px;
+      position: relative;
+      overflow: hidden;
+      transition: var(--transition);
+    }
+    .vp-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-sm);
+    }
+    .vp-card::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 4px;
+      background: linear-gradient(180deg, var(--teal), var(--teal-dark));
+    }
+    .vp-card h4 {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      color: var(--text-dark);
+      margin-bottom: 0.5rem;
+    }
+    .vp-card p {
+      font-size: 0.9rem;
+      color: var(--text-mid);
+      line-height: 1.65;
+    }
+
+    /* Hero left override */
+    .hero__left {
+      background: var(--hero-grad);
+    }
+
+    /* Social proof bar */
+    .sp-bar {
+      background: #fff8f5;
+      border-top: 3px solid var(--accent);
+      padding: 22px 0;
+    }
+    .sp-bar__inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 48px;
+      flex-wrap: wrap;
+    }
+    .sp-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.88rem;
+      color: var(--text-mid);
+      font-weight: 500;
+    }
+    .sp-item svg { color: var(--accent); }
+  </style>
+
+<link rel="shortcut icon" href="/assets/logo.webp" type="image/x-icon">
+
+</head>
+<body>
+
+<!-- ═══════════════════════════ NAV ═══════════════════════════ -->
+<nav class="nav">
+  <div class="container">
+    <div class="nav__inner">
+      <a href="https://podologiabogota.dondeseria.com/" class="nav__brand">
+        <div class="nav__logo-mark">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+          </svg>
+        </div>
+        <div>
+          Pie Pro Salud
+          <span>Tu segunda opinión · Bogotá</span>
+        </div>
+      </a>
+      <a href="https://wa.me/573222177518?text=Hola,%20quiero%20agendar%20cita%20con%20podólogo%20particular%20en%20Bogotá"
+         class="nav__cta"
+         onclick="gtag('event','conversion',{'send_to':'AW-17597907952/Bf0wCI_q4oEcEPCHq8dB'})">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.122 1.525 5.857L.057 23.858l6.168-1.45A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.93 0-3.742-.502-5.313-1.38l-.38-.22-3.662.862.878-3.572-.248-.394A9.944 9.944 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+        <span>Consultar ahora</span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════ HERO ══════════════════════════ -->
+<section class="hero">
+  <div class="hero__left">
+    <div class="urgency-badge">
+      <span class="urgency-dot"></span>
+      Podólogo particular · Atención inmediata · Sin EPS
+    </div>
+    <p class="hero__eyebrow">Podólogo Bogotá — Atención Particular</p>
+    <h1 class="hero__h1">
+      Atención <em>inmediata</em>,<br>sin filas y sin<br>trámites de EPS
+    </h1>
+    <p class="hero__sub">
+      En Pie Pro Salud no tienes que esperar semanas. Contáctanos hoy y agenda tu cita con un podólogo certificado en Bogotá — particular, ágil y profesional.
+    </p>
+    <div class="hero__actions">
+      <a href="https://wa.me/573222177518?text=Hola,%20quiero%20agendar%20cita%20inmediata%20con%20podólogo%20particular%20en%20Bogotá"
+         class="btn-wa"
+         onclick="gtag('event','conversion',{'send_to':'AW-17597907952/Bf0wCI_q4oEcEPCHq8dB'})">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.122 1.525 5.857L.057 23.858l6.168-1.45A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.93 0-3.742-.502-5.313-1.38l-.38-.22-3.662.862.878-3.572-.248-.394A9.944 9.944 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+        Cita hoy — WhatsApp
+      </a>
+      <a href="#por-que" class="btn-outline">
+        Conocer más
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+    <div class="hero__trust">
+      <div class="hero__trust-badge">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg>
+        Sin remisión
+      </div>
+      <div class="hero__trust-badge">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg>
+        Misma semana
+      </div>
+      <div class="hero__trust-badge">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg>
+        Todo Bogotá
+      </div>
+    </div>
+  </div>
+  <div class="hero__right">
+    <div class="hero__video-wrap" id="videoWrap2">
+      <!-- ✏️ REEMPLAZA la ruta del video aquí: cambia ./assets/Video2.mp4 por la ruta real de tu video -->
+      <video id="heroVideo2" autoplay muted loop playsinline
+             style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;z-index:1;"
+             oncanplay="document.getElementById('videoOverlay2').style.opacity='0'"
+             onerror="document.getElementById('videoOverlay2').style.opacity='1'">
+        <source src="/assets/Video2.mp4" type="video/mp4">
+      </video>
+      <div id="videoOverlay2" style="
+        position:absolute;inset:0;z-index:2;
+        background-image:url('/assets/portada2.webp');
+        background-size:cover;background-position:center;
+        display:flex;align-items:center;justify-content:center;
+        transition:opacity 0.6s ease;
+      ">
+        <div style="
+          width:72px;height:72px;border-radius:50%;
+          background:rgba(0,184,212,0.9);
+          display:flex;align-items:center;justify-content:center;
+          box-shadow:0 8px 32px rgba(0,0,0,0.3);
+          cursor:pointer;transition:transform 0.2s;
+        " onclick="playHeroVideo('heroVideo2','videoOverlay2')"
+           onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="white" style="margin-left:4px"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL PROOF BAR -->
+<div class="sp-bar">
+  <div class="container">
+    <div class="sp-bar__inner">
+      <div class="sp-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+        Respuesta por WhatsApp en minutos
+      </div>
+      <div class="sp-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+        Cita disponible la misma semana
+      </div>
+      <div class="sp-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+        Sin burocracia ni intermediarios
+      </div>
+      <div class="sp-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+        Podólogos certificados
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════ COMPARATIVO ════════════════════════ -->
+<section class="section bg-light" id="por-que">
+  <div class="container">
+    <div class="section-header section-header--center">
+      <span class="section-eyebrow">¿Por qué cambiar?</span>
+      <h2 class="section-h2">Lo que <em>realmente importa</em> cuando buscas podólogo</h2>
+      <p class="section-lead">No todas las opciones son iguales. Aquí te mostramos en qué nos diferenciamos.</p>
+    </div>
+    <div style="overflow-x:auto;">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Criterio</th>
+            <th class="col-them">Otras opciones</th>
+            <th class="col-us">Pie Pro Salud ✓</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Tiempo de espera para cita</td>
+            <td class="col-them">Semanas o meses</td>
+            <td class="col-us">Esta semana</td>
+          </tr>
+          <tr>
+            <td>¿Requiere EPS o remisión?</td>
+            <td class="col-them"><span class="cross-red">✗</span> Sí</td>
+            <td class="col-us"><span class="check-green">✓</span> No</td>
+          </tr>
+          <tr>
+            <td>Atención a domicilio</td>
+            <td class="col-them">Limitada o no disponible</td>
+            <td class="col-us">Disponible en Bogotá</td>
+          </tr>
+          <tr>
+            <td>Podólogo certificado</td>
+            <td class="col-them">Variable</td>
+            <td class="col-us"><span class="check-green">✓</span> Siempre</td>
+          </tr>
+          <tr>
+            <td>Instrumental esterilizado</td>
+            <td class="col-them">Variable</td>
+            <td class="col-us"><span class="check-green">✓</span> Protocolo completo</td>
+          </tr>
+          <tr>
+            <td>Contacto directo por WhatsApp</td>
+            <td class="col-them">No siempre disponible</td>
+            <td class="col-us"><span class="check-green">✓</span> Respuesta rápida</td>
+          </tr>
+          <tr>
+            <td>Seguimiento post-tratamiento</td>
+            <td class="col-them">No incluido</td>
+            <td class="col-us"><span class="check-green">✓</span> Incluido</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ PROPUESTA VALOR ════════════════════ -->
+<section class="section bg-white">
+  <div class="container">
+    <div class="section-header section-header--center">
+      <span class="section-eyebrow">Lo que nos hace diferentes</span>
+      <h2 class="section-h2">Cuatro razones para elegir <em>Pie Pro Salud</em></h2>
+    </div>
+    <div class="vp-grid">
+      <div class="vp-card">
+        <h4>⚡ Atención inmediata</h4>
+        <p>No esperes semanas. En Pie Pro Salud buscamos siempre la cita más pronta posible. Escríbenos hoy y en minutos te confirmamos disponibilidad.</p>
+      </div>
+      <div class="vp-card">
+        <h4>🎓 Profesionales certificados</h4>
+        <p>Nuestros podólogos son profesionales con formación específica en patologías del pie, no auxiliares de enfermería ni técnicos de pedicura.</p>
+      </div>
+      <div class="vp-card">
+        <h4>🏠 Clínica y domicilio</h4>
+        <p>¿Prefieres que vayamos a ti? También ofrecemos servicio a domicilio en toda Bogotá con el mismo estándar de atención y bioseguridad de la clínica.</p>
+      </div>
+      <div class="vp-card">
+        <h4>🛡️ Bioseguridad total</h4>
+        <p>Instrumental esterilizado en autoclave, protocolo de bioseguridad certificado y materiales descartables en cada consulta. Tu seguridad no es negociable.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ TARIFAS ══════════════════════════ -->
+<section class="section bg-white" id="tarifas">
+  <div class="container">
+    <div class="section-header section-header--center">
+      <span class="section-eyebrow">Precios claros y sin sorpresas</span>
+      <h2 class="section-h2">Nuestros servicios <em>y tarifas</em></h2>
+      <p class="section-lead">Atención particular con tarifas transparentes. Sabes exactamente cuánto pagas y qué incluye desde antes de agendar.</p>
+    </div>
+    <div class="pricing-grid">
+
+      <div class="price-card">
+        <span class="price-card__badge">En clínica</span>
+        <div class="price-card__icon">🦶</div>
+        <div class="price-card__name">Quiropodia</div>
+        <div class="price-card__desc">Corte correctivo con instrumental especializado, limado de uñas, retiro de callosidades zona plantar, exfoliación y masaje.</div>
+        <div class="price-card__footer">
+          <div class="price-card__price">$115.000<small>por sesión</small></div>
+          <a href="https://wa.me/573222177518?text=Hola,%20quiero%20agendar%20quiropodia%20en%20Bogotá" class="price-card__cta" onclick="gtag('event','conversion',{'send_to':'AW-17597907952/Bf0wCI_q4oEcEPCHq8dB'})">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.122 1.525 5.857L.057 23.858l6.168-1.45A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.93 0-3.742-.502-5.313-1.38l-.38-.22-3.662.862.878-3.572-.248-.394A9.944 9.944 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+            Agendar
+          </a>
+        </div>
+      </div>
+
+      <div class="price-card">
+        <span class="price-card__badge">Uña encarnada</span>
+        <div class="price-card__icon">✂️</div>
+        <div class="price-card__name">Onicectomía Parcial<br>1 lateral</div>
+        <div class="price-card__desc">Anestesia local, corte recto y profundo retirando la espícula que genera molestia. Dedo cubierto con antibióticos cicatrizantes.</div>
+        <div class="price-card__footer">
+          <div class="price-card__price">$165.000<small>por lateral</small></div>
+          <a href="https://wa.me/573222177518?text=Hola,%20necesito%20onicectomía%20por%20uña%20encarnada%20en%20Bogotá" class="price-card__cta" onclick="gtag('event','conversion',{'send_to':'AW-17597907952/Bf0wCI_q4oEcEPCHq8dB'})">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.122 1.525 5.857L.057 23.858l6.168-1.45A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.93 0-3.742-.502-5.313-1.38l-.38-.22-3.662.862.878-3.572-.248-.394A9.944 9.944 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+            Agendar
+          </a>
+        </div>
+      </div>
+
+      <div class="price-card">
+        <span class="price-card__badge">Uña encarnada</span>
+        <div class="price-card__icon">✂️</div>
+        <div class="price-card__name">Onicectomía Parcial<br>2 laterales</div>
+        <div class="price-card__desc">Procedimiento en ambos laterales. Anestesia local, corte profundo y cobertura con antibióticos cicatrizantes en los dos lados.</div>
+        <div class="price-card__footer">
+          <div class="price-card__price">$225.000<small>ambos laterales</small></div>
+          <a href="https://wa.me/573222177518?text=Hola,%20necesito%20onicectomía%20en%20dos%20laterales" class="price-card__cta" onclick="gtag('event','conversion',{'send_to':'AW-17597907952/Bf0wCI_q4oEcEPCHq8dB'})">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.122 1.525 5.857L.057 23.858l6.168-1.45A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.93 0-3.742-.502-5.313-1.38l-.38-.22-3.662.862.878-3.572-.248-.394A9.944 9.944 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+            Agendar
+          </a>
+        </div>
+      </div>
+
+      <div class="price-card">
+        <span class="price-card__badge">En clínica</span>
+        <div class="price-card__icon">🔬</div>
+        <div class="price-card__name">Tratamiento Antimicótico</div>
+        <div class="price-card__desc">Profilaxis completa: corte correctivo en todas las uñas, retiro de callosidades, exfoliación, masaje, limado profundo de zona contaminada, queratolítico especializado y receta antimicótica.</div>
+        <div class="price-card__footer">
+          <div class="price-card__price">$115.000<small>por sesión</small></div>
+          <a href="https://wa.me/573222177518?text=Hola,%20quiero%20tratamiento%20antimicótico%20en%20Bogotá" class="price-card__cta" onclick="gtag('event','conversion',{'send_to':'AW-17597907952/Bf0wCI_q4oEcEPCHq8dB'})">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.122 1.525 5.857L.057 23.858l6.168-1.45A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.93 0-3.742-.502-5.313-1.38l-.38-.22-3.662.862.878-3.572-.248-.394A9.944 9.944 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+            Agendar
+          </a>
+        </div>
+      </div>
+
+      <div class="price-card">
+        <span class="price-card__badge">En clínica</span>
+        <div class="price-card__icon">💆</div>
+        <div class="price-card__name">Terapia Podal</div>
+        <div class="price-card__desc">Hidroterapia con masaje de agua, exfoliación profunda y masaje final con luz infrarroja. Relajación y recuperación total para tus pies.</div>
+        <div class="price-card__footer">
+          <div class="price-card__price">$65.000<small>por sesión</small></div>
+          <a href="https://wa.me/573222177518?text=Hola,%20quiero%20terapia%20podal%20en%20Bogotá" class="price-card__cta" onclick="gtag('event','conversion',{'send_to':'AW-17597907952/Bf0wCI_q4oEcEPCHq8dB'})">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.122 1.525 5.857L.057 23.858l6.168-1.45A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.93 0-3.742-.502-5.313-1.38l-.38-.22-3.662.862.878-3.572-.248-.394A9.944 9.944 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+            Agendar
+          </a>
+        </div>
+      </div>
+
+      <div class="price-card">
+        <span class="price-card__badge price-card__badge--domicilio">A domicilio</span>
+        <div class="price-card__icon">🏠</div>
+        <div class="price-card__name">Quiropodia a Domicilio</div>
+        <div class="price-card__desc">Quiropodia completa en tu casa. Corte correctivo, limado, retiro de callosidades, exfoliación y masaje. Con uña encarnada: incluye procedimiento especializado a domicilio.</div>
+        <div class="price-card__footer">
+          <div class="price-card__price">$225.000<small>Con encarnada: $290.000</small></div>
+          <a href="https://wa.me/573222177518?text=Hola,%20quiero%20quiropodia%20a%20domicilio%20en%20Bogotá" class="price-card__cta" onclick="gtag('event','conversion',{'send_to':'AW-17597907952/Bf0wCI_q4oEcEPCHq8dB'})">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.122 1.525 5.857L.057 23.858l6.168-1.45A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.93 0-3.742-.502-5.313-1.38l-.38-.22-3.662.862.878-3.572-.248-.394A9.944 9.944 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+            Agendar
+          </a>
+        </div>
+      </div>
+
+    </div>
+    <p class="pricing-note">¿Tienes dudas o necesitas orientación antes de decidir? <a href="https://wa.me/573222177518?text=Hola,%20tengo%20preguntas%20sobre%20los%20servicios%20y%20precios" onclick="gtag('event','conversion',{'send_to':'AW-17597907952/Bf0wCI_q4oEcEPCHq8dB'})">Escríbenos sin compromiso →</a></p>
+  </div>
+</section>
+
+<!-- ══════════════════ IMAGEN + BENEFICIOS ════════════════════ -->
+<section class="section bg-light">
+  <div class="container">
+    <div class="split">
+      <div>
+        <div class="section-header">
+          <span class="section-eyebrow">La diferencia Pie Pro Salud</span>
+          <h2 class="section-h2">Un podólogo que <em>te escucha</em><br>y da resultados reales</h2>
+          <p class="section-lead">Sabemos que muchos llegan a nosotros después de experiencias frustrantes. Nuestro compromiso es que esa sea la última vez que tengas que buscar podólogo.</p>
+        </div>
+        <div class="benefit-list">
+          <div class="benefit-item">
+            <div class="benefit-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <p><strong>Primera consulta orientativa sin compromiso</strong> — cuéntanos tu caso por WhatsApp y te decimos si podemos ayudarte antes de que reserves cita.</p>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <p><strong>Diagnóstico en la primera visita</strong> — en la gran mayoría de los casos evaluamos y comenzamos el tratamiento en la misma cita.</p>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <p><strong>Plan de tratamiento claro</strong> — ningún paciente sale de nuestra clínica sin saber exactamente qué tiene, qué le haremos y cómo será su recuperación.</p>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <p><strong>Seguimiento real post-consulta</strong> — estamos disponibles por WhatsApp para resolver dudas durante tu recuperación, sin costos adicionales.</p>
+          </div>
+        </div>
+      </div>
+      <div class="split__visual">
+        <img
+          src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=800&q=80"
+          alt="Podólogo particular Bogotá Pie Pro Salud atención inmediata"
+          loading="lazy"
+        >
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ TESTIMONIOS ════════════════════════ -->
+<section class="section bg-white">
+  <div class="container">
+    <div class="section-header section-header--center">
+      <span class="section-eyebrow">Pacientes que nos eligieron</span>
+      <h2 class="section-h2">Bogotanos que encontraron <em>la atención que merecían</em></h2>
+    </div>
+    <div class="testimonials">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <blockquote>Intenté con otra clínica primero y la espera era de un mes. En Pie Pro Salud me atendieron en tres días. La diferencia en calidad y agilidad es notable.</blockquote>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">SM</div>
+          <div>
+            <div class="testimonial-author-name">Sandra M.</div>
+            <div class="testimonial-author-meta">Bogotá · Tratamiento uñas</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <blockquote>Vine porque quería una segunda opinión. El podólogo fue muy directo, me explicó bien el diagnóstico y el tratamiento fue exactamente lo que necesitaba. Sin rodeos.</blockquote>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">FG</div>
+          <div>
+            <div class="testimonial-author-name">Fernando G.</div>
+            <div class="testimonial-author-meta">Bogotá Norte · Pie diabético</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <blockquote>Mi mamá tiene movilidad reducida. El servicio a domicilio fue impecable: llegaron puntual, con todo el equipo esterilizado y ella quedó muy contenta con el trato.</blockquote>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">DV</div>
+          <div>
+            <div class="testimonial-author-name">Diana V.</div>
+            <div class="testimonial-author-meta">Suba · Servicio a domicilio</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ HIGHLIGHT ══════════════════════════ -->
+<section class="section-sm bg-light">
+  <div class="container">
+    <div class="highlight-box">
+      <h3>¿Llevas tiempo buscando el podólogo indicado?</h3>
+      <p>Muchos de nuestros pacientes llegan después de meses buscando una opción confiable en Bogotá sin tener que depender de su EPS. Si ese es tu caso, escríbenos hoy — en Pie Pro Salud la primera conversación es siempre sin compromiso y sin costo.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ FAQ ═══════════════════════════ -->
+<section class="section bg-white">
+  <div class="container">
+    <div class="section-header section-header--center">
+      <span class="section-eyebrow">Preguntas frecuentes</span>
+      <h2 class="section-h2">Lo que necesitas <em>saber antes</em> de venir</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question">
+          ¿Qué diferencia hay entre atención particular y por EPS?
+          <div class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </button>
+        <div class="faq-answer">La atención particular elimina los tiempos de espera, las autorizaciones previas y los intermediarios. Pagas directamente por la consulta y obtienes atención inmediata de calidad, sin depender de agendas saturadas ni trámites administrativos.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          ¿Puedo agendar para esta misma semana?
+          <div class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </button>
+        <div class="faq-answer">En la mayoría de los casos sí. Escríbenos por WhatsApp y te indicamos la disponibilidad más próxima. Nuestro objetivo es que no esperes más de lo necesario.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          ¿Qué debo llevar a la primera consulta?
+          <div class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </button>
+        <div class="faq-answer">Solo tus pies y tus dudas. No necesitas remisión médica, ni resultados de exámenes previos para la primera consulta. Si tienes historiales o diagnósticos anteriores, tráelos — pueden ser útiles pero no son obligatorios.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          ¿Cuánto cuesta una consulta particular con podólogo?
+          <div class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </button>
+        <div class="faq-answer">El valor varía según el tipo de servicio y procedimiento. Escríbenos por WhatsApp describiendo tu caso y te damos información personalizada. No cobramos por la orientación previa.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          ¿Atienden pacientes mayores o con movilidad reducida?
+          <div class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </button>
+        <div class="faq-answer">Absolutamente. Para pacientes con dificultad de desplazamiento contamos con servicio a domicilio en Bogotá, con el mismo nivel de atención y equipamiento que en nuestra clínica.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ CTA BAND ══════════════════════════ -->
+<section class="cta-band">
+  <div class="container">
+    <h2 class="cta-band__h2">No sigas buscando.<br><em style="font-style:italic;color:var(--teal);">Pie Pro Salud</em> es tu respuesta.</h2>
+    <p class="cta-band__sub">Podólogo particular en Bogotá. Atención inmediata. Sin EPS. Sin filas.<br>Un mensaje es todo lo que necesitas.</p>
+    <div class="cta-band__actions">
+      <a href="https://wa.me/573222177518?text=Hola,%20quiero%20agendar%20cita%20con%20un%20podólogo%20particular%20en%20Bogotá"
+         class="btn-wa"
+         onclick="gtag('event','conversion',{'send_to':'AW-17597907952/Bf0wCI_q4oEcEPCHq8dB'})">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.122 1.525 5.857L.057 23.858l6.168-1.45A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.93 0-3.742-.502-5.313-1.38l-.38-.22-3.662.862.878-3.572-.248-.394A9.944 9.944 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+        Quiero mi cita particular
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ MAPA ══════════════════════════════ -->
+<section class="map-section">
+  <div class="container">
+    <div class="section-header section-header--center" style="margin-bottom:40px;">
+      <span class="section-eyebrow">Encuéntranos</span>
+      <h2 class="section-h2">Estamos en <em>Bogotá</em></h2>
+    </div>
+    <div class="map-grid">
+      <div class="map-embed">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51606.405385634884!2d-74.17530552301163!3d4.6524825323109855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9fa0fa4bb383%3A0xaa3cd388f082d204!2sPodologia%20Bogota%20%7C%20Pie%20Pro%20Salud!5e0!3m2!1ses-419!2sco!4v1772490286417!5m2!1ses-419!2sco" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="map-info">
+        <h3>Pie Pro Salud<br><em style="font-style:italic;color:var(--teal-dark);">Podólogo Particular Bogotá</em></h3>
+        <div class="map-detail">
+          <div class="map-detail__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+          </div>
+          <div class="map-detail__text">
+            <p>Cobertura</p>
+            <strong>Toda Bogotá · En clínica y a domicilio</strong>
+          </div>
+        </div>
+        <div class="map-detail">
+          <div class="map-detail__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="map-detail__text">
+            <p>Disponibilidad</p>
+            <strong>Lunes a Sábado · Citas flexibles<br>Consulta disponibilidad por WhatsApp</strong>
+          </div>
+        </div>
+        <div class="map-detail">
+          <div class="map-detail__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+          </div>
+          <div class="map-detail__text">
+            <p>Contacto directo</p>
+            <strong><a href="https://wa.me/573222177518" onclick="gtag('event','conversion',{'send_to':'AW-17597907952/Bf0wCI_q4oEcEPCHq8dB'})" style="color:var(--teal-dark);">+57 322 217 7518</a></strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════════════════════ FOOTER ══════════════════════════ -->
+<footer class="footer-lp">
+  <div class="container">
+    <div class="footer-lp__inner">
+      <div class="footer-lp__brand">
+        Pie Pro Salud
+        <span>Podólogo Particular · Bogotá Colombia</span>
+      </div>
+      <div class="footer-lp__links">
+        <a href="https://podologiabogota.dondeseria.com/">Sitio principal</a>
+        <a href="landing-unas-encarnadas.html">Uñas Encarnadas</a>
+        <a href="landing-podologo-bogota.html">Podólogo Bogotá</a>
+        <a href="https://wa.me/573222177518" onclick="gtag('event','conversion',{'send_to':'AW-17597907952/Bf0wCI_q4oEcEPCHq8dB'})">WhatsApp</a>
+      </div>
+    </div>
+    <div class="footer-lp__bottom">
+      <p>© 2025 Pie Pro Salud. Podólogo Particular Bogotá. Todos los derechos reservados.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ════════════════════ WHATSAPP FLOTANTE ════════════════════ -->
+<a href="https://wa.me/573222177518?text=Hola,%20busco%20podólogo%20particular%20en%20Bogotá%20con%20atención%20inmediata"
+   class="wa-float"
+   title="Atención inmediata — WhatsApp"
+   onclick="gtag('event','conversion',{'send_to':'AW-17597907952/Bf0wCI_q4oEcEPCHq8dB'})">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.122 1.525 5.857L.057 23.858l6.168-1.45A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.93 0-3.742-.502-5.313-1.38l-.38-.22-3.662.862.878-3.572-.248-.394A9.944 9.944 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+</a>
+
+<script>
+  function playHeroVideo(videoId, overlayId) {
+    var v = document.getElementById(videoId);
+    var o = document.getElementById(overlayId);
+    if (v) {
+      v.play().then(function(){ o.style.opacity = '0'; setTimeout(function(){ o.style.pointerEvents='none'; }, 600); })
+       .catch(function(){ o.style.opacity = '1'; });
+    }
+  }
+  document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+</script>
+</body>
+</html>
