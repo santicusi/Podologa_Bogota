@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Podólogo Bogotá | Clínica Podológica Particular | Pie Pro Salud</title>
-  <meta name="description" content="Podólogo en Bogotá — clínica podológica particular, atención a domicilio, sin EPS. Kennedy, Suba, Norte, Calle 127. Agenda por WhatsApp hoy. Pie Pro Salud.">
+  <meta name="description" content="Podólogo en Bogotá — clínica podológica particular, sin EPS. Kennedy, Suba, Norte, Calle 127. Agenda por WhatsApp hoy. Pie Pro Salud.">
   <link rel="stylesheet" href="landing.css">
 
   <!-- Google tag (gtag.js) -->
@@ -253,6 +253,9 @@
         padding: 36px 28px;
       }
     }
+    /* Testimonios: 2 columnas */
+    .testimonials { grid-template-columns: repeat(2, 1fr); max-width: 860px; margin: 0 auto; }
+    @media (max-width: 860px) { .testimonials { grid-template-columns: 1fr; } }
   </style>
 
 <link rel="shortcut icon" href="/assets/logo.webp" type="image/x-icon">
@@ -298,7 +301,7 @@
       La mejor <em>clínica podológica</em><br>de Bogotá — en tu barrio
     </h1>
     <p class="hero__sub">
-      Podólogos certificados a domicilio y en clínica. Atención particular en toda Bogotá: Kennedy, Suba, Norte, Calle 127. Cita disponible hoy.
+      Podólogos certificados en nuestra clínica, con atención particular para pacientes de Kennedy, Suba, Norte, Calle 127 y toda Bogotá. Cita disponible hoy.
     </p>
     <div class="hero__actions">
       <a href="https://wa.me/573222177518?text=Hola,%20quiero%20agendar%20una%20cita%20con%20podólogo%20en%20Bogotá"
@@ -319,7 +322,7 @@
       </div>
       <div class="hero__trust-badge">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg>
-        A domicilio
+        WhatsApp hasta 10 p.m.
       </div>
       <div class="hero__trust-badge">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg>
@@ -343,10 +346,6 @@
       <span class="zone-pill">
         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
         Calle 127
-      </span>
-      <span class="zone-pill">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
-        A domicilio
       </span>
     </div>
   </div>
@@ -412,7 +411,7 @@
     <div class="section-header section-header--center">
       <span class="section-eyebrow">Podología en Bogotá</span>
       <h2 class="section-h2">Todo lo que un <em>podólogo en Bogotá</em> puede hacer por ti</h2>
-      <p class="section-lead">Desde cuidado general del pie hasta procedimientos especializados — atendemos tanto en clínica como a domicilio en toda Bogotá.</p>
+      <p class="section-lead">Desde cuidado general del pie hasta procedimientos especializados, todo en nuestra clínica en Bogotá.</p>
     </div>
     <div class="services-compact">
       <div class="service-pill">
@@ -437,24 +436,10 @@
         </div>
       </div>
       <div class="service-pill">
-        <div class="service-pill__icon">💉</div>
-        <div class="service-pill__text">
-          <strong>Pie diabético</strong>
-          <span>Cuidado especializado y preventivo</span>
-        </div>
-      </div>
-      <div class="service-pill">
         <div class="service-pill__icon">🩺</div>
         <div class="service-pill__text">
           <strong>Callos y durezas</strong>
           <span>Extracción y tratamiento de fondo</span>
-        </div>
-      </div>
-      <div class="service-pill">
-        <div class="service-pill__icon">🏠</div>
-        <div class="service-pill__text">
-          <strong>Podología a domicilio</strong>
-          <span>En tu casa, por toda Bogotá</span>
         </div>
       </div>
       <div class="service-pill">
@@ -560,42 +545,8 @@
         </div>
       </div>
 
-      <!-- Quiropodia Domicilio -->
-      <div class="price-card">
-        <span class="price-card__badge price-card__badge--domicilio">A domicilio</span>
-        <div class="price-card__icon">🏠</div>
-        <div class="price-card__name">Quiropodia a Domicilio</div>
-        <div class="price-card__desc">Todo el servicio de quiropodia en tu casa: corte correctivo, limado, retiro de callosidades, exfoliación y masaje. Mismo protocolo que en clínica. Domicilio con uña encarnada incluye procedimiento especializado.</div>
-        <div class="price-card__footer">
-          <div class="price-card__price">$225.000<small>Domicilio encarnada: $290.000</small></div>
-          <a href="https://wa.me/573222177518?text=Hola,%20quiero%20quiropodia%20a%20domicilio%20en%20Bogotá" class="price-card__cta" onclick="gtag('event','conversion',{'send_to':'AW-18472847885/EueaCKeqy4odEI2UxehE'})">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.122 1.525 5.857L.057 23.858l6.168-1.45A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.93 0-3.742-.502-5.313-1.38l-.38-.22-3.662.862.878-3.572-.248-.394A9.944 9.944 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-            Agendar
-          </a>
-        </div>
-      </div>
-
     </div>
     <p class="pricing-note">¿Tienes un caso especial o necesitas orientación antes de agendar? <a href="https://wa.me/573222177518?text=Hola,%20tengo%20una%20consulta%20sobre%20precios%20y%20servicios" onclick="gtag('event','conversion',{'send_to':'AW-18472847885/EueaCKeqy4odEI2UxehE'})">Escríbenos sin compromiso →</a></p>
-  </div>
-</section>
-
-<!-- ══════════════════════ DOMICILIO EXTRA ════════════════════ -->
-<section class="section-sm bg-light">
-  <div class="container">
-    <div class="domicilio-card">
-      <div>
-        <h3>¿Buscas podólogo<br>a domicilio en Bogotá?</h3>
-        <p>Llevamos nuestro consultorio hasta donde estés. Servicio disponible en Kennedy, Suba, Norte, Calle 127 y más zonas de Bogotá. Mismo estándar de atención, mismos protocolos de bioseguridad.</p>
-        <a href="https://wa.me/573222177518?text=Hola,%20necesito%20un%20podólogo%20a%20domicilio%20en%20Bogotá"
-           class="btn-wa"
-           onclick="gtag('event','conversion',{'send_to':'AW-18472847885/EueaCKeqy4odEI2UxehE'})">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.122 1.525 5.857L.057 23.858l6.168-1.45A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.93 0-3.742-.502-5.313-1.38l-.38-.22-3.662.862.878-3.572-.248-.394A9.944 9.944 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-          Consultar disponibilidad
-        </a>
-      </div>
-      <div style="text-align:center;font-size:5rem;opacity:0.6;position:relative;z-index:1;">🏠</div>
-    </div>
   </div>
 </section>
 
@@ -627,7 +578,7 @@
           </div>
           <div class="benefit-item">
             <div class="benefit-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8"><polyline points="20 6 9 17 4 12"/></svg></div>
-            <p><strong>Podólogo a domicilio en Bogotá</strong> — llevamos toda la clínica hasta tu puerta en zonas como Kennedy, Suba, Norte y Calle 127.</p>
+            <p><strong>Atención por WhatsApp hasta las 10:00 p.m.</strong> — resolvemos tus dudas y agendamos tu cita en clínica, sin trámites ni llamadas.</p>
           </div>
           <div class="benefit-item">
             <div class="benefit-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8"><polyline points="20 6 9 17 4 12"/></svg></div>
@@ -660,17 +611,6 @@
       </div>
       <div class="testimonial-card">
         <div class="testimonial-stars">★★★★★</div>
-        <blockquote>Tomé el servicio a domicilio porque no podía desplazarme. El podólogo llegó puntual con todo el equipo esterilizado. Increíble comodidad y excelente atención.</blockquote>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">MH</div>
-          <div>
-            <div class="testimonial-author-name">Martha H.</div>
-            <div class="testimonial-author-meta">Suba · Podología a domicilio</div>
-          </div>
-        </div>
-      </div>
-      <div class="testimonial-card">
-        <div class="testimonial-stars">★★★★★</div>
         <blockquote>Llevaba tiempo con hongos en las uñas. En dos consultas en su clínica cerca de la Calle 127 tuve un diagnóstico claro y un plan de tratamiento real. Ya no sufro el problema.</blockquote>
         <div class="testimonial-author">
           <div class="testimonial-avatar">RP</div>
@@ -697,7 +637,7 @@
           ¿Atienden en Kennedy, Suba y otras zonas de Bogotá?
           <div class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
         </button>
-        <div class="faq-answer">Sí. Atendemos en clínica y también ofrecemos servicio a domicilio en múltiples zonas de Bogotá incluyendo Kennedy, Suba, Norte, Calle 127 y sectores cercanos. Consúltanos por WhatsApp para confirmar cobertura en tu zona.</div>
+        <div class="faq-answer">Sí, en nuestra clínica recibimos pacientes de Kennedy, Suba, Norte, Calle 127 y otros sectores de Bogotá. Todos los servicios se realizan en clínica, no hacemos atención a domicilio.</div>
       </div>
       <div class="faq-item">
         <button class="faq-question">
@@ -712,13 +652,6 @@
           <div class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
         </button>
         <div class="faq-answer">No. Al ser una clínica particular, puedes agendarte directamente sin necesidad de remisiones, autorizaciones ni trámites con ninguna EPS o caja de compensación.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question">
-          ¿Atienden pacientes diabéticos?
-          <div class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
-        </button>
-        <div class="faq-answer">Sí, contamos con protocolo específico para pacientes con diabetes. El cuidado del pie diabético requiere atención especializada y preventiva que ofrecemos con el equipamiento y la formación adecuados.</div>
       </div>
       <div class="faq-item">
         <button class="faq-question">
@@ -766,7 +699,7 @@
           </div>
           <div class="map-detail__text">
             <p>Sede</p>
-            <strong>Bogotá, Colombia<br>Atención en clínica y a domicilio</strong>
+            <strong>Bogotá, Colombia<br>Atención en clínica</strong>
           </div>
         </div>
         <div class="map-detail">
@@ -775,7 +708,7 @@
           </div>
           <div class="map-detail__text">
             <p>Disponibilidad</p>
-            <strong>Lunes a Sábado<br>Consulta horarios por WhatsApp</strong>
+            <strong>Lunes a Sábado<br>WhatsApp hasta las 10:00 p.m.</strong>
           </div>
         </div>
         <div class="map-detail">
